@@ -2,9 +2,9 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
   <device name="right_lower_leg_mc" type="embObjMotionControl" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <xi:include href="../../general.xml" itype="params"/>
-      <xi:include href="../../hardware/electronics/right_lower_leg-ems9-eln.xml" itype="params" />
-      <xi:include href="../../hardware/mechanicals/right_lower_leg-ems9-mec.xml" itype="params" />
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/right_lower_leg-ems9-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/right_lower_leg-ems9-mec.xml" />
 
     <group name="LIMITS">
         <param name="Max">                      30            20        </param>

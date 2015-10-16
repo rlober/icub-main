@@ -2,7 +2,7 @@
 <!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 <params>
-    <xi:include href="./pc104.xml" itype="params" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="./pc104.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
     <group name="ETH">
         <param name="IpAddress">	10.0.1.2	</param>
