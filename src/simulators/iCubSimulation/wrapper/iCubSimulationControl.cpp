@@ -36,6 +36,7 @@
 #include <yarp/os/Log.h>
 #include <yarp/os/LogStream.h>
 
+#define TESTLIMITS
 using namespace yarp::os;
 using namespace yarp::dev;
 
@@ -1319,6 +1320,10 @@ bool iCubSimulationControl::getLimitsRaw(int axis, double *min, double *max)
         _mutex.wait();
          *min = limitsMin[axis];
          *max = limitsMax[axis];
+#ifdef TESTLIMITS
+        *min = 0;
+        *max = 0.02/180*3.14;
+#endif
          _mutex.post();
          return true;
      }
@@ -1453,6 +1458,10 @@ bool iCubSimulationControl::getVelLimitsRaw(int axis, double *min, double *max)
         _mutex.wait();
         *min = velLimitsMin[axis];
         *max = velLimitsMax[axis];
+#ifdef TESTLIMITS
+        *min = 0;
+        *max = 2.0 / 180.0 * 3.14;
+#endif
         _mutex.post();
         return true;
     }
